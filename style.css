@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(266, 97%, 74%);
+    height: 100hv;
+}
+  .container{
+    position: relative;
+    width: 550px;
+    height: 100hv;
+    margin: 0;
+    overflow: hidden;
+  }
+  .header{
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header *{
+    display: flex;
+    flex-direction: column;
+    color: rgb(62, 0, 144);
+  }
+
+  .header p{
+    font-size: 10px;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  .slider{
+    width: 100%;
+    display: flex;
+    /* transition: transform 0.5s ease; */
+    
+  }
+
+  .slider img {
+    width: 550px;
+    height: 550px;
+    /* Add transition for opacity to create fade-in effect */
+    transition: opacity 0.5s ease;
+    /* Set opacity to 0 by default */
+    opacity: 0;
+  }
+
+  .slider img.active {
+    /* Set opacity to 1 for the active image */
+    opacity: 1;
+  }
+
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 53%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .prev-btn{
+    border-radius: 0 20px 20px 0;
+  }
+
+  .next-btn {
+    right: 0;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .container>button:hover{
+    background-color: #553e74;
+  }
+
+  .auto-play{
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+  
+  .auto-play button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(126, 27, 255);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+  }
+  
+  button:hover {
+    background-color: hwb(266 0% 20%);
+  }
+
+
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(214, 182, 255);
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+.dot:hover{
+    background-color: #862cfb;
+}
+
+  .dot.active {
+    background-color: rgb(126, 27, 255);
+    width: 13px;
+    height: 13px;
+  }
